@@ -22,7 +22,7 @@ const blendsTeina = [
       "<strong>Té negro</strong>",
     ],
     ideal: "Climas fríos y después de las comidas",
-    image: "/mock-te.webp",
+    image: "/cumbre.jpeg",
   },
   {
     name: "Masala Chai",
@@ -36,7 +36,7 @@ const blendsTeina = [
       "<strong>Té negro</strong>",
     ],
     ideal: "Momentos de activación y ritual",
-    image: "/mock-te.webp",
+    image: "/chai.jpeg",
   },
   {
     name: "Nativo",
@@ -49,7 +49,7 @@ const blendsTeina = [
       "<strong>Té verde</strong>",
     ],
     ideal: "Pausas conscientes",
-    image: "/mock-te.webp",
+    image: "/nativo.jpeg",
   },
 ];
 
@@ -61,7 +61,7 @@ const blendsSinTeina = [
     ingredientes: ["Manzanilla", "Pasionaria", "Canela"],
     beneficios: "Relajante, antiinflamatoria",
     usos: "Descanso, ansiedad leve, cierre del día",
-    image: "/mock-infusion.webp",
+    image: "/sienna.jpeg",
   },
   {
     name: "Cira",
@@ -76,7 +76,7 @@ const blendsSinTeina = [
     ],
     beneficios: "Digestiva, energizante suave",
     usos: "Después de comidas, activación sin cafeína",
-    image: "/mock-infusion.webp",
+    image: "/cira.jpeg",
   },
   {
     name: "Luma",
@@ -85,7 +85,7 @@ const blendsSinTeina = [
     ingredientes: ["Coco", "Cascarilla de cacao", "Canela"],
     beneficios: "Sedante, calmante",
     usos: "Ritual nocturno e introspección",
-    image: "/mock-infusion.webp",
+    image: "/luma.jpeg",
   },
   {
     name: "Ayra",
@@ -94,7 +94,7 @@ const blendsSinTeina = [
     ingredientes: ["Cedrón", "Manzanilla", "Pétalos de rosa"],
     beneficios: "Digestiva, analgésica",
     usos: "Molestias digestivas leves y tensión corporal",
-    image: "/mock-infusion.webp",
+    image: "/ayra.jpeg",
   },
   {
     name: "Ruma",
@@ -112,7 +112,7 @@ const blendsSinTeina = [
     ],
     beneficios: "Descongestiva, digestiva",
     usos: "Cambios de clima, respiración y digestión pesada",
-    image: "/mock-infusion.webp",
+    image: "/ruma.jpeg",
   },
   {
     name: "Zenda",
@@ -121,7 +121,7 @@ const blendsSinTeina = [
     ingredientes: ["Caléndula", "Naranja"],
     beneficios: "Diurética, antiséptica",
     usos: "Procesos depurativos y rutinas conscientes",
-    image: "/mock-infusion.webp",
+    image: "/zenda.jpeg",
   },
 ];
 

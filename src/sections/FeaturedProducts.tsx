@@ -30,21 +30,32 @@ const products = [
 
 export function FeaturedProducts() {
   return (
-    <section id="productos" className="px-6 py-28">
+    <section
+      id="productos"
+      className="relative px-6 pt-14 pb-24 md:pt-10 md:pb-24 bg-white overflow-hidden"
+    >
+      {/* anclaje visual con sección anterior (desktop-friendly) */}
+      <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-[2px] bg-(--color-primary)/25 rounded-full hidden md:block" />
+
       <div className="max-w-7xl mx-auto">
 
         {/* Header sección */}
-        <div className="mb-16 text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold text-(--color-primary)">
+        <div className="mb-12 md:mb-10 text-center max-w-2xl mx-auto animate-fade-in-up">
+          <span className="block text-xs uppercase tracking-widest text-(--color-primary) font-medium">
+            Productos
+          </span>
+
+          <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-(--color-primary)">
             Nuestros productos
           </h2>
+
           <p className="mt-4 text-lg text-(--color-muted)">
             Distintas formas de acompañar tu ritual cotidiano.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3 animate-fade-in-up delay-1">
           {products.map((product) => (
             <ProductCard
               key={product.title}

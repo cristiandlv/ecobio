@@ -17,7 +17,7 @@ const toppings: Topping[] = [
     ingredientes: ["Manzanilla", "Pasionaria", "Canela"],
     beneficios: "Relajante, antiinflamatoria",
     usos: "Ideal para descanso y cierre del día",
-    image: "/mock-infusion.webp",
+    image: "/sienna.jpeg",
   },
   {
     name: "Cira",
@@ -25,7 +25,7 @@ const toppings: Topping[] = [
     ingredientes: ["Romero", "Peperina", "Clavo", "Melisa", "Diente de león"],
     beneficios: "Digestiva, energizante suave",
     usos: "Después de comidas, sin cafeína",
-    image: "/mock-infusion.webp",
+    image: "/cira.jpeg",
   },
   {
     name: "Luma",
@@ -33,7 +33,7 @@ const toppings: Topping[] = [
     ingredientes: ["Coco", "Cacao", "Canela"],
     beneficios: "Calmante, digestiva",
     usos: "Ritual nocturno",
-    image: "/mock-infusion.webp",
+    image: "/luma.jpeg",
   },
   {
     name: "Ayra",
@@ -41,7 +41,7 @@ const toppings: Topping[] = [
     ingredientes: ["Cedrón", "Manzanilla", "Rosa"],
     beneficios: "Digestiva, analgésica",
     usos: "Tensión corporal y acidez",
-    image: "/mock-infusion.webp",
+    image: "/ayra.jpeg",
   },
   {
     name: "Ruma",
@@ -49,7 +49,7 @@ const toppings: Topping[] = [
     ingredientes: ["Menta", "Jengibre", "Lemon Grass", "Peperina"],
     beneficios: "Descongestiva, digestiva",
     usos: "Cambios de clima",
-    image: "/mock-infusion.webp",
+    image: "/ruma.jpeg",
   },
   {
     name: "Zenda",
@@ -57,7 +57,7 @@ const toppings: Topping[] = [
     ingredientes: ["Caléndula", "Naranja"],
     beneficios: "Diurética, digestiva",
     usos: "Rutinas conscientes",
-    image: "/mock-infusion.webp",
+    image: "/zenda.jpeg",
   },
 ];
 

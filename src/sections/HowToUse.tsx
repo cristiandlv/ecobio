@@ -32,7 +32,7 @@ export function HowToUse() {
             <li className="flex items-start gap-4">
               <span className="text-2xl leading-none">🧉</span>
               <p className="leading-relaxed">
-                Agregá una cucharadita del topping en el fondo, justo en el agujerito donde colocas la bombilla para sentir sabor desde el primer Mate.
+                Agregá una cucharadita del topping en el fondo justo donde colocas la bombilla, asi vas a sentir el sabor desde el primer mate.
               </p>
             </li>
 
