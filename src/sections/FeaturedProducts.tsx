@@ -22,7 +22,7 @@ const products = [
     title: "Fitoterapia personalizada",
     description:
       "Recetas y blends funcionales creados según tus necesidades de bienestar.",
-    image: "/mock-infusion.webp",
+    image: "/infusion5.webp",
     href: "/fitoterapia",
     tag: "Fitoterapia",
   },

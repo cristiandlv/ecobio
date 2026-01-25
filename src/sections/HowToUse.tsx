@@ -32,21 +32,21 @@ export function HowToUse() {
             <li className="flex items-start gap-4">
               <span className="text-2xl leading-none">🧉</span>
               <p className="leading-relaxed">
-                Agregá una cucharadita del topping sobre la yerba.
+                Agregá una cucharadita del topping en el fondo, justo en el agujerito donde colocas la bombilla para sentir sabor desde el primer Mate.
               </p>
             </li>
 
             <li className="flex items-start gap-4">
               <span className="text-2xl leading-none">🌿</span>
               <p className="leading-relaxed">
-                Podés mezclarlo o usarlo en capas, según tu preferencia.
+                Podés mezclarlo con la yerba también o usarlo en capas, según tu preferencia.
               </p>
             </li>
 
             <li className="flex items-start gap-4">
               <span className="text-2xl leading-none">💧</span>
               <p className="leading-relaxed">
-                Cebá como siempre y dejá que el aroma haga lo suyo.
+                Cebá como siempre y dejá que el aroma y el sabor hagan lo suyo.
               </p>
             </li>
           </ul>
