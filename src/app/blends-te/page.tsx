@@ -10,80 +10,94 @@ import { getSlug } from "@/data/products";
 const blendsTeina = [
   {
     name: "Cumbre",
-    perfil: "Especiado, intenso, reconfortante",
-    gustos: "Canela y especias cálidas",
+    perfil: "Aromático, frutal, digestivo",
+    gustos: "Dulce, citrico y refrescante",
     ingredientes: [
-      "Cardamomo",
+      "Rosa mosqueta",
+      "Hibiscus",
       "Clavo de olor",
-      "Anís estrellado",
-      "Jengibre",
-      "Pimienta",
-      "Canela",
-      "<strong>Té negro</strong>",
+      "Petalos de rosa",
+      "Naranja",
+      "<strong>Té Rojo</strong>",
     ],
-    ideal: "Climas fríos y después de las comidas",
+    ideal: "Diurético, antiflamatorio y digestivo",
     image: "/cumbre.jpeg",
   },
   {
     name: "Masala Chai",
-    perfil: "Especiado, profundo",
+    perfil: "Especiado, profundo, depurativo",
     gustos: "Especias dulces y cuerpo intenso",
     ingredientes: [
       "Cardamomo",
       "Clavo de olor",
       "Canela",
       "Jengibre",
+      "Pimienta",
+      "Anis estrellado",
       "<strong>Té negro</strong>",
     ],
-    ideal: "Momentos de activación y ritual",
+    ideal: "Depurativo, digestivo y revitalizante",
     image: "/chai.jpeg",
   },
   {
     name: "Nativo",
+    perfil: "Liviano, fresco y diuretico",
+    gustos: "Notas frutales y dulces",
+    ingredientes: [
+      "Mandarina",
+      "Hibiscus",
+      "Roiboos",
+    ],
+    ideal: "Sin cafeína, relanjante, diurético y digestivo",
+    image: "/nativo.jpeg",
+  },
+  {
+    name: "Prado",
     perfil: "Herbal, fresco",
     gustos: "Notas verdes y florales",
+    
     ingredientes: [
       "Cedrón",
       "Pimienta rosa",
       "Lavanda",
+      "Petalos de rosa",
       "<strong>Té verde</strong>",
     ],
-    ideal: "Pausas conscientes",
-    image: "/nativo.jpeg",
+    ideal: "Antioxidante y relajante",
+    image: "/prado.jpeg",
   },
 ];
 
 const blendsSinTeina = [
+  
   {
     name: "Sienna",
-    perfil: "Suave, floral, calmante",
+    perfil: "Intenso y especiado",
     gustos: "Dulce y envolvente",
-    ingredientes: ["Manzanilla", "Pasionaria", "Canela"],
+    ingredientes: ["Coco", "Cascarilla de Cacao", "Canela"],
     beneficios: "Relajante, antiinflamatoria",
-    usos: "Descanso, ansiedad leve, cierre del día",
+    usos: "Energezinate ideal para inicio del día",
     image: "/sienna.jpeg",
   },
   {
     name: "Cira",
-    perfil: "Herbal, fresco, estimulante",
-    gustos: "Verde y aromático",
+    perfil: "Floral, especiado y relajante",
+    gustos: "Dulce y herbal",
     ingredientes: [
-      "Romero",
-      "Peperina",
-      "Clavo de olor",
-      "Melisa",
-      "Diente de león",
+      "Manzanilla",
+      "Pasionaria",
+      "Canela",
     ],
-    beneficios: "Digestiva, energizante suave",
-    usos: "Después de comidas, activación sin cafeína",
+    beneficios: "Antiinflamatoria, calmante y relajante",
+    usos: "Insomnio, descanso mental y físico",
     image: "/cira.jpeg",
   },
   {
     name: "Luma",
-    perfil: "Cálido, envolvente",
-    gustos: "Cacao suave y coco",
-    ingredientes: ["Coco", "Cascarilla de cacao", "Canela"],
-    beneficios: "Sedante, calmante",
+    perfil: "Cálido y floral",
+    gustos: "Dulce y suave",
+    ingredientes: ["Cedrón", "Manzanilla", "Pétalos de rosa"],
+    beneficios: "Digestiva y calmante",
     usos: "Ritual nocturno e introspección",
     image: "/luma.jpeg",
   },
@@ -91,35 +105,39 @@ const blendsSinTeina = [
     name: "Ayra",
     perfil: "Cítrico, refrescante",
     gustos: "Fresco y floral",
-    ingredientes: ["Cedrón", "Manzanilla", "Pétalos de rosa"],
-    beneficios: "Digestiva, analgésica",
-    usos: "Molestias digestivas leves y tensión corporal",
-    image: "/ayra.jpeg",
-  },
-  {
-    name: "Ruma",
-    perfil: "Intenso, herbal",
-    gustos: "Mentolado y especiado",
     ingredientes: [
-      "Menta",
-      "Jengibre",
-      "Lemon Grass",
-      "Limón",
       "Peperina",
       "Tomillo",
       "Diente de león",
       "Cedrón",
+      "Naranja",
+      "Caléndula",
     ],
-    beneficios: "Descongestiva, digestiva",
-    usos: "Cambios de clima, respiración y digestión pesada",
+    beneficios: "Digestiva, analgésica y antiespasmódica",
+    usos: "Cambio de clima, molestias digestivas leves y tensión corporal",
+    image: "/ayra.jpeg",
+  },
+  {
+    name: "Ruma",
+    perfil: "Balanceado y herbal",
+    gustos: "Fresco y especiado",
+    ingredientes: [
+      "Romero",
+      "Peperina",
+      "Clavo de olor",
+      "Melisa",
+      "Diente de león",
+    ],
+    beneficios: "Diuretica, antiinflamatoria y antiséptica",
+    usos: "Depurativa, retención de líquidos y digestión pesada",
     image: "/ruma.jpeg",
   },
   {
     name: "Zenda",
-    perfil: "Floral, suave, depurativo",
-    gustos: "Floral ligero y cítrico",
-    ingredientes: ["Caléndula", "Naranja"],
-    beneficios: "Diurética, antiséptica",
+    perfil: "Intenso, aromático y envolvente",
+    gustos: "Mentolado y cítrico",
+    ingredientes: ["Menta", "Jengibre", "Lemon Grass", "limón"],
+    beneficios: "Digestiva, espectorante y analgésica",
     usos: "Procesos depurativos y rutinas conscientes",
     image: "/zenda.jpeg",
   },
@@ -129,7 +147,7 @@ const blendsSinTeina = [
    HELPERS
 ====================== */
 
-const whatsappBase = "https://wa.me/5491123456789?text=";
+const whatsappBase = "https://wa.me/5492246460002?text=";
 
 function getWspLink(blend: { name: string }) {
   return (
@@ -203,7 +221,7 @@ export default function BlendsTePage() {
                 <p><strong>Perfil:</strong> {blend.perfil}</p>
                 <p><strong>Gustos:</strong> {blend.gustos}</p>
 
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-1.5 justify-center">
                   {blend.ingredientes.map((ing) => (
                     <span
                       key={ing}
@@ -214,7 +232,7 @@ export default function BlendsTePage() {
                 </div>
 
                 <p className="text-xs text-neutral-500">
-                  Ideal para: {blend.ideal}
+                  Propiedades: {blend.ideal}
                 </p>
               </div>
             </ProductCard>

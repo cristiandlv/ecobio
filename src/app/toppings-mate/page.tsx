@@ -13,50 +13,67 @@ interface Topping {
 const toppings: Topping[] = [
   {
     name: "Sienna",
-    descripcion: "Suave, floral y calmante",
-    ingredientes: ["Manzanilla", "Pasionaria", "Canela"],
+    descripcion: "Intenso y especiado",
+    ingredientes: ["Coco", "Cascarilla de Cacao", "Canela"],
     beneficios: "Relajante, antiinflamatoria",
-    usos: "Ideal para descanso y cierre del día",
+    usos: "Energezinate ideal para inicio del día",
     image: "/sienna.jpeg",
   },
   {
     name: "Cira",
-    descripcion: "Herbal, fresco, estimulante",
-    ingredientes: ["Romero", "Peperina", "Clavo", "Melisa", "Diente de león"],
-    beneficios: "Digestiva, energizante suave",
-    usos: "Después de comidas, sin cafeína",
+    descripcion: "Floral, especiado y relajante",
+    ingredientes: [
+      "Manzanilla",
+      "Pasionaria",
+      "Canela",
+    ],
+    beneficios: "Antiinflamatoria, calmante y relajante",
+    usos: "Insomnio, descanso mental y físico",
     image: "/cira.jpeg",
   },
   {
     name: "Luma",
-    descripcion: "Cálido y envolvente",
-    ingredientes: ["Coco", "Cacao", "Canela"],
+    descripcion: "Cálido y floral",
+    ingredientes: ["Cedrón", "Manzanilla", "Pétalos de rosa"],
     beneficios: "Calmante, digestiva",
     usos: "Ritual nocturno",
     image: "/luma.jpeg",
   },
   {
     name: "Ayra",
-    descripcion: "Cítrico y refrescante",
-    ingredientes: ["Cedrón", "Manzanilla", "Rosa"],
-    beneficios: "Digestiva, analgésica",
-    usos: "Tensión corporal y acidez",
+    descripcion: "Cítrico, refrescante",
+    ingredientes: [
+      "Peperina",
+      "Tomillo",
+      "Diente de león",
+      "Cedrón",
+      "Naranja",
+      "Caléndula",
+    ],
+    beneficios: "Digestiva, analgésica y antiespasmódica",
+    usos: "Cambio de clima, molestias digestivas leves y tensión corporal",
     image: "/ayra.jpeg",
   },
   {
     name: "Ruma",
-    descripcion: "Intenso y herbal",
-    ingredientes: ["Menta", "Jengibre", "Lemon Grass", "Peperina"],
-    beneficios: "Descongestiva, digestiva",
-    usos: "Cambios de clima",
+    descripcion: "Balanceado y herbal",
+    ingredientes: [
+      "Romero",
+      "Peperina",
+      "Clavo de olor",
+      "Melisa",
+      "Diente de león",
+    ],
+    beneficios: "Diuretica, antiinflamatoria y antiséptica",
+    usos: "Depurativa, retención de líquidos y digestión pesada",
     image: "/ruma.jpeg",
   },
   {
     name: "Zenda",
-    descripcion: "Floral y depurativo",
-    ingredientes: ["Caléndula", "Naranja"],
-    beneficios: "Diurética, digestiva",
-    usos: "Rutinas conscientes",
+    descripcion: "Intenso, aromático y envolvente",
+    ingredientes: ["Menta", "Jengibre", "Lemon Grass", "limón"],
+    beneficios: "Digestiva, espectorante y analgésica",
+    usos: "Procesos depurativos y rutinas conscientes",
     image: "/zenda.jpeg",
   },
 ];
@@ -123,7 +140,7 @@ export default function ToppingsMatePage() {
                 <strong>Perfil:</strong> {t.descripcion}
               </p>
 
-              <div className="flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-1.5 justify-center">
                 {t.ingredientes.map((ing) => (
                   <span
                     key={ing}
