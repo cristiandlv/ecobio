@@ -30,6 +30,12 @@ export default function FitoterapiaPage() {
           <span className="px-4 py-1.5 text-sm rounded-full bg-(--color-primary-soft)">
             Fitoterapia
           </span>
+          <Link
+            href="/infusores"
+            className="px-4 py-1.5 text-sm rounded-full border border-neutral-200 hover:bg-(--color-primary-soft)"
+          >
+            Infusores
+          </Link>
         </nav>
 
         <a

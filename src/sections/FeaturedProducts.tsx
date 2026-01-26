@@ -8,7 +8,6 @@ const products = [
       "Hierbas, flores y especias seleccionadas para sumar aroma, sabor y propósito al mate cotidiano.",
     image: "/mock-mate.webp",
     href: "/toppings-mate",
-    tag: "Mate",
   },
   {
     title: "Blends de té",
@@ -16,7 +15,6 @@ const products = [
       "Blends de té en hebras y hierbas seleccionadas, pensados para distintos momentos del día.",
     image: "/mock-te.webp",
     href: "/blends-te",
-    tag: "Té",
   },
   {
     title: "Fitoterapia personalizada",
@@ -24,7 +22,13 @@ const products = [
       "Recetas y blends funcionales creados según tus necesidades de bienestar.",
     image: "/infusion5.webp",
     href: "/fitoterapia",
-    tag: "Fitoterapia",
+  },
+  {
+    title: "Infusores",
+    description:
+      "Accesorios reutilizables y ecológicos para preparar tus infusiones de forma consciente.",
+    image: "/infusorchico.jpeg",
+    href: "/infusores",
   },
 ];
 
@@ -32,15 +36,22 @@ export function FeaturedProducts() {
   return (
     <section
       id="productos"
-      className="relative px-6 pt-14 pb-24 md:pt-10 md:pb-24 bg-white overflow-hidden"
+      className="
+        relative
+        px-6
+        pt-20
+        pb-28
+        bg-gradient-to-b
+        from-(--color-primary-soft)/40
+        to-white
+      "
     >
-      {/* anclaje visual con sección anterior (desktop-friendly) */}
-      <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-[2px] bg-(--color-primary)/25 rounded-full hidden md:block" />
+      {/* Conector con sección anterior */}
+      <div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-white to-transparent" />
 
       <div className="max-w-7xl mx-auto">
-
-        {/* Header sección */}
-        <div className="mb-12 md:mb-10 text-center max-w-2xl mx-auto animate-fade-in-up">
+        {/* Header */}
+        <header className="mb-12 text-center max-w-2xl mx-auto">
           <span className="block text-xs uppercase tracking-widest text-(--color-primary) font-medium">
             Productos
           </span>
@@ -52,33 +63,58 @@ export function FeaturedProducts() {
           <p className="mt-4 text-lg text-(--color-muted)">
             Distintas formas de acompañar tu ritual cotidiano.
           </p>
-        </div>
+        </header>
 
-        {/* Cards */}
-        <div className="grid gap-8 md:grid-cols-3 animate-fade-in-up delay-1">
+        {/* Grid */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
-            <ProductCard
+            <Link
               key={product.title}
-              title={product.title}
-              image={product.image}
-              imageAlt={`Imagen de ${product.title}`}
-              className="shadow-md hover:shadow-xl"
-              action={
-                <Link
-                  href={product.href}
-                  className="text-sm font-medium text-(--color-primary) hover:underline"
-                >
-                  Ver más →
-                </Link>
-              }
+              href={product.href}
+              className="
+                group
+                block
+                cursor-pointer
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-(--color-primary)
+                rounded-3xl
+              "
             >
-              <p className="text-sm text-(--color-muted)">
-                {product.description}
-              </p>
-            </ProductCard>
+              <ProductCard
+                title={product.title}
+                image={product.image}
+                imageAlt={`Imagen de ${product.title}`}
+                disableImageModal
+                className="
+                  h-full
+                  transition-all duration-300 ease-out
+                  group-hover:-translate-y-1
+                  group-hover:shadow-xl
+                "
+                action={
+                  <span
+                    className="
+                      text-sm font-medium text-(--color-primary)
+                      inline-flex items-center gap-1
+                      transition-all duration-300
+                      group-hover:gap-2
+                    "
+                  >
+                    Ver más
+                    <span className="transition-transform duration-300 group-hover:translate-x-1">
+                      →
+                    </span>
+                  </span>
+                }
+              >
+                <p className="text-sm text-(--color-muted)">
+                  {product.description}
+                </p>
+              </ProductCard>
+            </Link>
           ))}
         </div>
-
       </div>
     </section>
   );

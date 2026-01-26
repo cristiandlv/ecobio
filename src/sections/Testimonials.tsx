@@ -6,7 +6,7 @@ export function Testimonials() {
       detail: "Cliente habitual",
     },
     {
-      text: "Gracias a la fitoterapia y a estas infusiones duermo mejor. Es parte de mi rutina nocturna. Súper recomiendo.",
+      text: "Gracias a la fitoterapia y a estas infusiones duermo mejor. Es parte de mi rutina nocturna.",
       author: "Lucía",
       detail: "Consulta personalizada",
     },
@@ -18,36 +18,42 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="px-6 py-32 bg-(--color-primary-soft)">
+    <section className="px-6 py-24 md:py-32 bg-(--color-primary-soft)">
       <div className="max-w-6xl mx-auto">
-
-        <div className="text-center animate-fade-in-up">
-          <span className="text-xs uppercase tracking-widest text-(--color-primary) font-medium">
+        {/* Header */}
+        <div className="text-center max-w-xl mx-auto">
+          <span className="text-xs uppercase tracking-widest text-(--color-primary)">
             Testimonios
           </span>
-
           <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-(--color-primary)">
-            Experiencias reales con Ecobio
+            Experiencias reales
           </h2>
         </div>
 
-        <div className="mt-20 grid gap-10 md:grid-cols-3 animate-fade-in-up">
+        {/* Grid */}
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t, i) => (
             <blockquote
               key={i}
-              className="bg-white rounded-3xl p-8 shadow-xl border border-neutral-100 flex flex-col"
+              className="
+                bg-white
+                rounded-3xl
+                p-8
+                border border-neutral-200
+                flex flex-col
+              "
             >
-              <p className="text-neutral-700 leading-relaxed text-sm flex-grow">
+              <p className="text-sm text-neutral-700 leading-relaxed flex-grow">
                 “{t.text}”
               </p>
 
               <footer className="mt-6 text-sm">
-                <strong className="block text-neutral-800 font-medium">
+                <p className="font-medium text-neutral-800">
                   {t.author}
-                </strong>
-                <span className="text-(--color-muted)">
+                </p>
+                <p className="text-(--color-muted)">
                   {t.detail}
-                </span>
+                </p>
               </footer>
             </blockquote>
           ))}

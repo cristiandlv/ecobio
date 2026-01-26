@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
-import { getSlug } from "@/data/products";
 
 /* ======================
    DATA
@@ -11,16 +9,16 @@ const blendsTeina = [
   {
     name: "Cumbre",
     perfil: "Aromático, frutal, digestivo",
-    gustos: "Dulce, citrico y refrescante",
+    gustos: "Dulce, cítrico y refrescante",
     ingredientes: [
       "Rosa mosqueta",
       "Hibiscus",
       "Clavo de olor",
-      "Petalos de rosa",
+      "Pétalos de rosa",
       "Naranja",
-      "<strong>Té Rojo</strong>",
+      "<strong>Té rojo</strong>",
     ],
-    ideal: "Diurético, antiflamatorio y digestivo",
+    ideal: "Diurético, antiinflamatorio y digestivo",
     image: "/cumbre.jpeg",
   },
   {
@@ -33,7 +31,7 @@ const blendsTeina = [
       "Canela",
       "Jengibre",
       "Pimienta",
-      "Anis estrellado",
+      "Anís estrellado",
       "<strong>Té negro</strong>",
     ],
     ideal: "Depurativo, digestivo y revitalizante",
@@ -41,26 +39,21 @@ const blendsTeina = [
   },
   {
     name: "Nativo",
-    perfil: "Liviano, fresco y diuretico",
+    perfil: "Liviano, fresco y diurético",
     gustos: "Notas frutales y dulces",
-    ingredientes: [
-      "Mandarina",
-      "Hibiscus",
-      "Roiboos",
-    ],
-    ideal: "Sin cafeína, relanjante, diurético y digestivo",
+    ingredientes: ["Mandarina", "Hibiscus", "Rooibos"],
+    ideal: "Sin cafeína, relajante y digestivo",
     image: "/nativo.jpeg",
   },
   {
     name: "Prado",
-    perfil: "Herbal, fresco",
+    perfil: "Herbal y fresco",
     gustos: "Notas verdes y florales",
-    
     ingredientes: [
       "Cedrón",
       "Pimienta rosa",
       "Lavanda",
-      "Petalos de rosa",
+      "Pétalos de rosa",
       "<strong>Té verde</strong>",
     ],
     ideal: "Antioxidante y relajante",
@@ -69,27 +62,20 @@ const blendsTeina = [
 ];
 
 const blendsSinTeina = [
-  
   {
     name: "Sienna",
     perfil: "Intenso y especiado",
     gustos: "Dulce y envolvente",
-    ingredientes: ["Coco", "Cascarilla de Cacao", "Canela"],
-    beneficios: "Relajante, antiinflamatoria",
-    usos: "Energezinate ideal para inicio del día",
+    ingredientes: ["Coco", "Cascarilla de cacao", "Canela"],
+    usos: "Energizante suave para comenzar el día",
     image: "/sienna.jpeg",
   },
   {
     name: "Cira",
-    perfil: "Floral, especiado y relajante",
+    perfil: "Floral y relajante",
     gustos: "Dulce y herbal",
-    ingredientes: [
-      "Manzanilla",
-      "Pasionaria",
-      "Canela",
-    ],
-    beneficios: "Antiinflamatoria, calmante y relajante",
-    usos: "Insomnio, descanso mental y físico",
+    ingredientes: ["Manzanilla", "Pasionaria", "Canela"],
+    usos: "Descanso mental y físico",
     image: "/cira.jpeg",
   },
   {
@@ -97,14 +83,13 @@ const blendsSinTeina = [
     perfil: "Cálido y floral",
     gustos: "Dulce y suave",
     ingredientes: ["Cedrón", "Manzanilla", "Pétalos de rosa"],
-    beneficios: "Digestiva y calmante",
-    usos: "Ritual nocturno e introspección",
+    usos: "Ritual nocturno",
     image: "/luma.jpeg",
   },
   {
     name: "Ayra",
-    perfil: "Cítrico, refrescante",
-    gustos: "Fresco y floral",
+    perfil: "Cítrico y refrescante",
+    gustos: "Fresco y herbal",
     ingredientes: [
       "Peperina",
       "Tomillo",
@@ -113,8 +98,7 @@ const blendsSinTeina = [
       "Naranja",
       "Caléndula",
     ],
-    beneficios: "Digestiva, analgésica y antiespasmódica",
-    usos: "Cambio de clima, molestias digestivas leves y tensión corporal",
+    usos: "Molestias digestivas y tensión corporal",
     image: "/ayra.jpeg",
   },
   {
@@ -128,17 +112,15 @@ const blendsSinTeina = [
       "Melisa",
       "Diente de león",
     ],
-    beneficios: "Diuretica, antiinflamatoria y antiséptica",
-    usos: "Depurativa, retención de líquidos y digestión pesada",
+    usos: "Depuración y digestión pesada",
     image: "/ruma.jpeg",
   },
   {
     name: "Zenda",
-    perfil: "Intenso, aromático y envolvente",
+    perfil: "Intenso y aromático",
     gustos: "Mentolado y cítrico",
-    ingredientes: ["Menta", "Jengibre", "Lemon Grass", "limón"],
-    beneficios: "Digestiva, espectorante y analgésica",
-    usos: "Procesos depurativos y rutinas conscientes",
+    ingredientes: ["Menta", "Jengibre", "Lemon grass", "Limón"],
+    usos: "Rutinas conscientes y procesos depurativos",
     image: "/zenda.jpeg",
   },
 ];
@@ -149,10 +131,10 @@ const blendsSinTeina = [
 
 const whatsappBase = "https://wa.me/5492246460002?text=";
 
-function getWspLink(blend: { name: string }) {
+function getWspLink(item: { name: string }) {
   return (
     whatsappBase +
-    encodeURIComponent(`Hola! Quiero comprar el blend: ${blend.name}`)
+    encodeURIComponent(`Hola! Quiero comprar el blend: ${item.name}`)
   );
 }
 
@@ -163,11 +145,13 @@ function getWspLink(blend: { name: string }) {
 export default function BlendsTePage() {
   return (
     <section className="px-4 py-24 md:py-28 max-w-6xl mx-auto">
-      {/* HEADER */}
+
+      {/* ================= HEADER ================= */}
       <header className="mb-20 text-center">
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-(--color-primary)">
           Blends de té e infusiones
         </h1>
+
         <p className="mt-4 text-lg text-(--color-muted) max-w-2xl mx-auto">
           Blends artesanales en hebras y sin teína, pensados para acompañar
           distintos momentos del día y rituales cotidianos.
@@ -181,22 +165,31 @@ export default function BlendsTePage() {
           >
             Toppings
           </Link>
+
           <span className="px-4 py-1.5 text-sm rounded-full bg-(--color-primary-soft)">
             Blends
           </span>
+
           <Link
             href="/fitoterapia"
             className="px-4 py-1.5 text-sm rounded-full border border-neutral-200 hover:bg-(--color-primary-soft)"
           >
             Fitoterapia
           </Link>
+
+          <Link
+            href="/infusores"
+            className="px-4 py-1.5 text-sm rounded-full border border-neutral-200 hover:bg-(--color-primary-soft)"
+          >
+            Infusores
+          </Link>
         </nav>
       </header>
 
-      {/* CON TEÍNA */}
-      <section className="mb-24">
-        <h2 className="text-2xl font-semibold text-(--color-primary) mb-8">
-          Con teína
+      {/* ================= CON TEÍNA ================= */}
+      <section className="mb-28">
+        <h2 className="text-2xl font-semibold text-(--color-primary) mb-10 text-center">
+          Té en hebras
         </h2>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -211,17 +204,17 @@ export default function BlendsTePage() {
                 <a
                   href={getWspLink(blend)}
                   target="_blank"
-                  className="mt-3 inline-block bg-(--color-primary) text-white text-sm px-4 py-2 rounded-full"
+                  className="mt-4 inline-block bg-(--color-primary) text-white text-sm px-5 py-2 rounded-full hover:opacity-90 transition"
                 >
                   Comprar
                 </a>
               }
             >
-              <div className="space-y-2 text-sm text-neutral-700">
+              <div className="space-y-2 text-sm text-neutral-700 text-center">
                 <p><strong>Perfil:</strong> {blend.perfil}</p>
                 <p><strong>Gustos:</strong> {blend.gustos}</p>
 
-                <div className="flex flex-wrap gap-1.5 justify-center">
+                <div className="flex flex-wrap justify-center gap-1.5 mt-2">
                   {blend.ingredientes.map((ing) => (
                     <span
                       key={ing}
@@ -231,7 +224,7 @@ export default function BlendsTePage() {
                   ))}
                 </div>
 
-                <p className="text-xs text-neutral-500">
+                <p className="text-xs text-neutral-500 leading-relaxed">
                   Propiedades: {blend.ideal}
                 </p>
               </div>
@@ -240,9 +233,9 @@ export default function BlendsTePage() {
         </div>
       </section>
 
-      {/* SIN TEÍNA */}
+      {/* ================= SIN TEÍNA ================= */}
       <section>
-        <h2 className="text-2xl font-semibold text-(--color-primary) mb-8">
+        <h2 className="text-2xl font-semibold text-(--color-primary) mb-10 text-center">
           Sin teína
         </h2>
 
@@ -258,17 +251,17 @@ export default function BlendsTePage() {
                 <a
                   href={getWspLink(blend)}
                   target="_blank"
-                  className="mt-3 inline-block bg-(--color-primary) text-white text-sm px-4 py-2 rounded-full"
+                  className="mt-4 inline-block bg-(--color-primary) text-white text-sm px-5 py-2 rounded-full hover:opacity-90 transition"
                 >
                   Comprar
                 </a>
               }
             >
-              <div className="space-y-2 text-sm text-neutral-700">
+              <div className="space-y-2 text-sm text-neutral-700 text-center">
                 <p><strong>Perfil:</strong> {blend.perfil}</p>
                 <p><strong>Gustos:</strong> {blend.gustos}</p>
 
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap justify-center gap-1.5 mt-2">
                   {blend.ingredientes.map((ing) => (
                     <span
                       key={ing}
@@ -279,7 +272,7 @@ export default function BlendsTePage() {
                   ))}
                 </div>
 
-                <p className="text-xs text-neutral-500">
+                <p className="text-xs text-neutral-500 leading-relaxed">
                   {blend.usos}
                 </p>
               </div>
@@ -287,6 +280,7 @@ export default function BlendsTePage() {
           ))}
         </div>
       </section>
+
     </section>
   );
 }
