@@ -4,7 +4,7 @@ export function HowToUse() {
   return (
     <section
       id="como-usar"
-      className="relative px-6 py-28 bg-gradient-to-b from-white to-(--color-primary-soft) overflow-hidden"
+      className="relative pt-3 px-6 py-28 bg-gradient-to-b from-white to-(--color-primary-soft) overflow-hidden"
     >
       {/* fondo orgánico */}
       <div className="absolute -bottom-32 left-[-120px] w-80 h-80 bg-(--color-primary-soft) rounded-full blur-3xl opacity-50" />
@@ -26,7 +26,7 @@ export function HowToUse() {
             a tu mate, sin cambiar tu rutina. Pequeños gestos que transforman
             el momento.
           </p>
-
+          
           {/* pasos con iconos */}
           <ul className="mt-10 space-y-6 text-sm text-neutral-700">
             <li className="flex items-start gap-4">

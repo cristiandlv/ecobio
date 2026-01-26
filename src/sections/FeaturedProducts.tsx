@@ -39,7 +39,8 @@ export function FeaturedProducts() {
       className="
         relative
         px-6
-        pt-20
+        pt-5
+        py-24
         pb-28
         bg-gradient-to-b
         from-(--color-primary-soft)/40

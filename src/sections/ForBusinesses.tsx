@@ -4,7 +4,7 @@ export function ForBusinesses() {
   return (
     <section
       id="locales"
-      className="relative px-6 py-24 md:py-28 bg-white overflow-hidden"
+      className="relative pt-3 px-6 py-24 md:py-28 bg-white overflow-hidden"
     >
       <div className="max-w-6xl mx-auto grid gap-16 md:grid-cols-2 items-center">
 

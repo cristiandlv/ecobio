@@ -6,7 +6,7 @@ export function Testimonials() {
       detail: "Cliente habitual",
     },
     {
-      text: "Gracias a la fitoterapia y a estas infusiones duermo mejor. Es parte de mi rutina nocturna.",
+      text: "Gracias a la fitoterapia y a estas infusiones duermo mejor. Es parte de mi rutina nocturna. Súper recomiendo.",
       author: "Lucía",
       detail: "Consulta personalizada",
     },
@@ -18,20 +18,25 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="px-6 py-24 md:py-32 bg-(--color-primary-soft)">
+    <section className="relative px-6 py-24 md:py-28 bg-(--color-primary-soft)">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center max-w-xl mx-auto">
-          <span className="text-xs uppercase tracking-widest text-(--color-primary)">
+        <header className="text-center max-w-2xl mx-auto mb-14">
+          <span className="block text-xs uppercase tracking-widest text-(--color-primary) font-medium">
             Testimonios
           </span>
-          <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-(--color-primary)">
-            Experiencias reales
+          <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-(--color-primary)">
+            Experiencias reales con Ecobio
           </h2>
-        </div>
+        </header>
 
         {/* Grid */}
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="
+          grid gap-6
+          grid-cols-1
+          md:grid-cols-2
+          lg:grid-cols-3
+        ">
           {testimonials.map((t, i) => (
             <blockquote
               key={i}
@@ -39,7 +44,8 @@ export function Testimonials() {
                 bg-white
                 rounded-3xl
                 p-8
-                border border-neutral-200
+                border border-neutral-100
+                shadow-[0_10px_30px_rgba(0,0,0,0.06)]
                 flex flex-col
               "
             >
@@ -47,11 +53,11 @@ export function Testimonials() {
                 “{t.text}”
               </p>
 
-              <footer className="mt-6 text-sm">
-                <p className="font-medium text-neutral-800">
+              <footer className="mt-6">
+                <p className="text-sm font-medium text-neutral-800">
                   {t.author}
                 </p>
-                <p className="text-(--color-muted)">
+                <p className="text-xs text-(--color-muted)">
                   {t.detail}
                 </p>
               </footer>

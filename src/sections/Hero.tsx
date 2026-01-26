@@ -14,9 +14,11 @@ export function Hero() {
       <div
         className="
           relative max-w-7xl mx-auto px-6
-          pt-24 pb-32
-          md:pt-28 md:pb-36
-          grid md:grid-cols-2 gap-16 items-center
+         pt-20 pb-28 md:pt-32 md:pb-32
+
+
+          grid md:grid-cols-2 gap-16 items-center md:items-start
+
         "
       >
         {/* TEXTO */}
@@ -29,7 +31,7 @@ export function Hero() {
             Infusiones con propósito
           </h1>
 
-          <p className="mt-5 text-lg text-(--color-muted) leading-relaxed max-w-xl animate-fade-in-up">
+          <p className="mt-5 md:pt-6 text-lg text-(--color-muted) leading-relaxed max-w-xl animate-fade-in-up">
             Blends artesanales, toppings para <strong>mate</strong>, té en hebras
             y fitoterapia. Productos pensados para acompañar rituales reales,
             sin alterar tu rutina.
@@ -107,6 +109,11 @@ export function Hero() {
 
         </div>
       </div>
+      <div className="relative">
+  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-24 h-[2px] bg-(--color-primary)/20 rounded-full" />
+</div>
+
     </section>
+    
   );
 }
