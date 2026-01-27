@@ -4,12 +4,21 @@ export function HowToUse() {
   return (
     <section
       id="como-usar"
-      className="relative pt-3 px-6 py-28 bg-gradient-to-b from-white to-(--color-primary-soft) overflow-hidden"
+      className="
+        relative
+        px-6
+        py-20
+        md:py-28
+        bg-gradient-to-b
+        from-white
+        to-(--color-primary-soft)
+        overflow-hidden
+      "
     >
-      {/* fondo orgánico */}
-      <div className="absolute -bottom-32 left-[-120px] w-80 h-80 bg-(--color-primary-soft) rounded-full blur-3xl opacity-50" />
+      {/* fondo orgánico sutil */}
+      <div className="absolute -bottom-40 left-[-120px] w-72 h-72 bg-(--color-primary-soft) rounded-full blur-3xl opacity-40" />
 
-      <div className="relative max-w-6xl mx-auto grid gap-16 md:grid-cols-2 items-center">
+      <div className="relative max-w-6xl mx-auto grid gap-12 md:gap-16 md:grid-cols-2 items-start">
 
         {/* TEXTO */}
         <div className="animate-fade-in-up">
@@ -17,64 +26,74 @@ export function HowToUse() {
             Usos
           </span>
 
-          <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-(--color-primary)">
-            Un ritual simple,<br className="hidden md:block" /> todos los días
+          <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-(--color-primary)">
+            Un ritual simple
+            <br className="hidden md:block" /> todos los días
           </h2>
 
-          <p className="mt-6 text-(--color-muted) leading-relaxed max-w-xl">
-            Los toppings Ecobio están pensados para integrarse de forma natural
-            a tu mate, sin cambiar tu rutina. Pequeños gestos que transforman
-            el momento.
+          <p className="mt-5 text-(--color-muted) leading-relaxed max-w-xl text-sm md:text-base">
+            Los toppings Ecobio se integran de forma natural al mate.
+            Pequeños gestos que transforman el momento, sin cambiar tu rutina.
           </p>
-          
-          {/* pasos con iconos */}
-          <ul className="mt-10 space-y-6 text-sm text-neutral-700">
-            <li className="flex items-start gap-4">
-              <span className="text-2xl leading-none">🧉</span>
-              <p className="leading-relaxed">
-                Agregá una cucharadita del topping en el fondo justo donde colocas la bombilla, asi vas a sentir el sabor desde el primer mate.
+
+          {/* pasos */}
+          <ul className="mt-7 space-y-4 text-sm text-neutral-700">
+            <li className="flex items-start gap-3">
+              <span className="text-xl leading-none">🧉</span>
+              <p>
+                Agregá una cucharadita en el fondo, donde apoyás la bombilla.
               </p>
             </li>
 
-            <li className="flex items-start gap-4">
-              <span className="text-2xl leading-none">🌿</span>
-              <p className="leading-relaxed">
-                Podés mezclarlo con la yerba también o usarlo en capas, según tu preferencia.
+            <li className="flex items-start gap-3">
+              <span className="text-xl leading-none">🌿</span>
+              <p>
+                Podés mezclarlo con la yerba o usarlo en capas.
               </p>
             </li>
 
-            <li className="flex items-start gap-4">
-              <span className="text-2xl leading-none">💧</span>
-              <p className="leading-relaxed">
-                Cebá como siempre y dejá que el aroma y el sabor hagan lo suyo.
+            <li className="flex items-start gap-3">
+              <span className="text-xl leading-none">💧</span>
+              <p>
+                Cebá como siempre y dejá que el sabor haga lo suyo.
               </p>
             </li>
           </ul>
 
-          <p className="mt-10 text-sm text-(--color-muted)">
-            Cada blend está pensado para acompañar distintos momentos del día:
-            energía, pausa o descanso.
+          {/* cierre corto */}
+          <p className="mt-6 text-sm text-(--color-muted)">
+            Cada blend acompaña distintos momentos: energía, pausa o descanso.
           </p>
         </div>
 
-        {/* TARJETA TIP */}
+        {/* TIP (más compacto en mobile) */}
         <div className="relative animate-fade-in-up">
-          <div className="rounded-3xl bg-white p-10 shadow-xl border border-neutral-100">
+          <div
+            className="
+              rounded-3xl
+              bg-white
+              p-6
+              md:p-10
+              shadow-lg
+              border
+              border-neutral-100
+            "
+          >
             <span className="text-xs uppercase tracking-widest text-(--color-primary) font-medium">
               Tip Ecobio
             </span>
 
-            <p className="mt-4 text-lg font-medium text-neutral-800 leading-relaxed">
-              Probá combinar toppings según tu intención
+            <p className="mt-3 text-base md:text-lg font-medium text-neutral-800 leading-relaxed">
+              Combiná toppings según tu intención
             </p>
 
             <p className="mt-2 text-sm text-(--color-muted)">
-              Energía por la mañana, pausa a la tarde o relajación al final del día.
+              Energía a la mañana, pausa a la tarde o relajación al final del día.
             </p>
           </div>
 
-          {/* detalle */}
-          <div className="absolute -top-6 -right-6 w-24 h-24 bg-(--color-primary-soft) rounded-full blur-2xl opacity-60" />
+          {/* detalle decorativo */}
+          <div className="absolute -top-6 -right-6 w-20 h-20 bg-(--color-primary-soft) rounded-full blur-2xl opacity-50" />
         </div>
       </div>
     </section>

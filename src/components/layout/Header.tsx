@@ -11,8 +11,9 @@ export function Header() {
     { href: "/#productos", label: "Productos" },
     { href: "/#como-usar", label: "Usos" },
     { href: "/#locales", label: "Para locales" },
-    { href: "/#contacto", label: "Contacto" },
   ];
+
+  const whatsappLink = "https://wa.me/5492246460002";
 
   return (
     <>
@@ -45,6 +46,38 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
+
+            {/* CONTACTO → WhatsApp (con tooltip premium) */}
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                relative group text-neutral-700 transition
+                hover:text-(--color-primary)
+              "
+            >
+              Contacto
+
+              {/* Tooltip */}
+              <span
+                className="
+                  pointer-events-none
+                  absolute left-1/2 top-full mt-3 -translate-x-1/2
+                  whitespace-nowrap
+                  rounded-full
+                  bg-white
+                  px-4 py-2
+                  text-xs text-neutral-600
+                  shadow-lg border border-neutral-200
+                  opacity-0 translate-y-1
+                  transition-all duration-300
+                  group-hover:opacity-100 group-hover:translate-y-0
+                "
+              >
+                Estamos a un mensaje de distancia 💬
+              </span>
+            </a>
           </nav>
 
           {/* Desktop CTA */}
@@ -104,6 +137,17 @@ export function Header() {
                     {link.label}
                   </Link>
                 ))}
+
+                {/* Contacto mobile */}
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="font-medium text-neutral-800 hover:text-(--color-primary)"
+                >
+                  Contacto
+                </a>
               </nav>
 
               {/* Divider */}

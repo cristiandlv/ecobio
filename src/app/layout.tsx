@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Ecobio | Infusiones con propósito",
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="es">
         <body>
           <Header />
+          <WhatsAppButton />
             {children}
           <Footer />
         </body>

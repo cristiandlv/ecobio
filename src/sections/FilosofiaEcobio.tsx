@@ -2,21 +2,21 @@ import Image from "next/image";
 
 export function FilosofiaEcobio() {
   return (
-    <section className="relative px-6 pt-24 pb-24 bg-white overflow-hidden">
-
+    <section className="relative px-6 pt-1 pb-24 bg-white overflow-hidden">
       {/* Fondos suaves */}
       <div className="absolute top-10 left-[-120px] w-80 h-80 bg-(--color-primary-soft) rounded-full blur-3xl opacity-40" />
       <div className="absolute bottom-10 right-[-120px] w-72 h-72 bg-(--color-primary-soft) rounded-full blur-3xl opacity-30" />
 
       <div className="relative max-w-6xl mx-auto grid gap-16 md:grid-cols-2 items-start">
-
         {/* IMÁGENES */}
-        <div className="
-          order-2 md:order-1
-          grid grid-cols-2 gap-6
-          md:-mt-12
-          animate-fade-in
-        ">
+        <div
+          className="
+            order-2 md:order-1
+            grid grid-cols-2 gap-6
+            md:-mt-12
+            animate-fade-in
+          "
+        >
           <div className="col-span-2 rounded-3xl overflow-hidden shadow-xl group">
             <Image
               src="/mock-filosofia.webp"
@@ -49,11 +49,13 @@ export function FilosofiaEcobio() {
         </div>
 
         {/* TEXTO */}
-        <div className="
-          order-1 md:order-2
-          animate-fade-in-up
-          md:pt-8
-        ">
+        <div
+          className="
+            order-1 md:order-2
+            animate-fade-in-up
+            md:pt-8
+          "
+        >
           <span className="text-xs uppercase tracking-widest text-(--color-primary) font-medium">
             Filosofía Ecobio
           </span>
@@ -76,7 +78,9 @@ export function FilosofiaEcobio() {
           <p className="mt-6 text-sm font-medium text-(--color-primary)">
             Bienestar consciente, accesible y honesto.
           </p>
-          <div className="mt-10 flex flex-wrap gap-3">
+
+          {/* TAGS */}
+          <div className="mt-8 flex flex-wrap gap-3">
             {[
               "Ingredientes naturales",
               "Producción artesanal",
@@ -99,11 +103,39 @@ export function FilosofiaEcobio() {
             ))}
           </div>
 
-        </div>
-        
+          {/* AUTORA */}
+          <div
+            className="
+              mt-12
+              flex gap-5 items-start
+              rounded-3xl
+              bg-white
+              border border-neutral-100
+              shadow-sm
+              p-6
+            "
+          >
+            <div className="w-14 h-14 rounded-full bg-(--color-primary-soft) flex items-center justify-center text-(--color-primary) font-semibold">
+              M
+            </div>
 
+            <div>
+              <p className="text-sm text-neutral-700 leading-relaxed">
+                <strong className="font-medium text-neutral-900">
+                  Hola, soy Micaela
+                </strong>
+                , la creadora detrás de Ecobio. Amo las plantas y crear blends
+                que ayuden a las personas a reconectar con pequeños rituales
+                cotidianos me hace profundamente feliz.
+              </p>
+
+              <p className="mt-2 text-xs text-(--color-muted)">
+                Fundadora · Blend maker · Fitoterapia consciente
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      
     </section>
   );
 }

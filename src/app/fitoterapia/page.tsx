@@ -54,6 +54,7 @@ export default function FitoterapiaPage() {
           Este servicio está orientado a quienes buscan un acompañamiento más
           profundo y consciente, combinando saber herbal y escucha personalizada.
         </p>
+      <p className="mt-4 text-center text-(--color-muted)">Pronto encontrarás algunas opciones de fitoterapia listas para comprar</p>
       </div>
     </section>
   );

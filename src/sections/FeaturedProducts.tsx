@@ -38,21 +38,19 @@ export function FeaturedProducts() {
       id="productos"
       className="
         relative
-        px-6
-        pt-5
-        py-24
-        pb-28
+        pt-16
+        pb-16
         bg-gradient-to-b
         from-(--color-primary-soft)/40
         to-white
       "
     >
-      {/* Conector con sección anterior */}
-      <div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-white to-transparent" />
+      {/* Conector superior */}
+      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-white to-transparent pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <header className="mb-12 text-center max-w-2xl mx-auto">
+        <header className="mb-16 text-center max-w-2xl mx-auto animate-fade-in-up">
           <span className="block text-xs uppercase tracking-widest text-(--color-primary) font-medium">
             Productos
           </span>
@@ -65,47 +63,76 @@ export function FeaturedProducts() {
             Distintas formas de acompañar tu ritual cotidiano.
           </p>
         </header>
+      </div>
 
-        {/* Grid */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      {/* ===== MOBILE SLIDER ===== */}
+      <div className="relative md:hidden">
+        {/* Fades laterales */}
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-white to-transparent z-10" />
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white to-transparent z-10" />
+
+        <div
+          className="
+            flex
+            gap-6
+            overflow-x-auto
+            snap-x snap-mandatory
+            no-scrollbar
+            px-[calc(50vw-42.5%)]
+            py-4
+            mt-0
+          "
+        >
           {products.map((product) => (
-            <Link
+            <div
               key={product.title}
-              href={product.href}
               className="
-                group
-                block
-                cursor-pointer
-                focus-visible:outline-none
-                focus-visible:ring-2
-                focus-visible:ring-(--color-primary)
-                rounded-3xl
+                snap-center
+                shrink-0
+                w-[85%]
               "
             >
+              <Link href={product.href} className="block h-full">
+                <ProductCard
+                  title={product.title}
+                  image={product.image}
+                  imageAlt={`Imagen de ${product.title}`}
+                  disableImageModal
+                  className="h-full"
+                  action={
+                    <span className="inline-flex items-center gap-1 text-sm font-medium text-(--color-primary)">
+                      Ver más →
+                    </span>
+                  }
+                >
+                  <p className="text-sm text-(--color-muted)">
+                    {product.description}
+                  </p>
+                </ProductCard>
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-8 text-xs text-center text-(--color-muted)">
+          Deslizá para explorar →
+        </p>
+      </div>
+
+      {/* ===== DESKTOP GRID ===== */}
+      <div className="hidden md:block max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {products.map((product) => (
+            <Link key={product.title} href={product.href} className="block h-full">
               <ProductCard
                 title={product.title}
                 image={product.image}
                 imageAlt={`Imagen de ${product.title}`}
                 disableImageModal
-                className="
-                  h-full
-                  transition-all duration-300 ease-out
-                  group-hover:-translate-y-1
-                  group-hover:shadow-xl
-                "
+                className="h-full transition-all hover:-translate-y-1 hover:shadow-xl"
                 action={
-                  <span
-                    className="
-                      text-sm font-medium text-(--color-primary)
-                      inline-flex items-center gap-1
-                      transition-all duration-300
-                      group-hover:gap-2
-                    "
-                  >
-                    Ver más
-                    <span className="transition-transform duration-300 group-hover:translate-x-1">
-                      →
-                    </span>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-(--color-primary)">
+                    Ver más →
                   </span>
                 }
               >

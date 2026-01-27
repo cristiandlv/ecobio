@@ -3,32 +3,31 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="border-t border-neutral-200 bg-white">
-      <div className="max-w-6xl mx-auto px-6 py-20">
+      <div className="max-w-6xl mx-auto px-6 py-14 md:py-20">
 
         {/* CONTENIDO */}
-        <div className="grid gap-14 md:grid-cols-2 items-start">
+        <div className="grid gap-12 md:grid-cols-2 items-start">
 
-          {/* Marca */}
+          {/* Marca + contacto */}
           <div className="max-w-md">
             <p className="text-xl font-semibold tracking-tight text-(--color-primary)">
               Ecobio
             </p>
 
-            <p className="mt-5 text-sm text-(--color-muted) leading-relaxed">
-              Infusiones artesanales, blends funcionales y toppings para mate.
-              Productos pensados para acompañar rituales cotidianos con intención,
-              simpleza y conciencia.
+            <p className="mt-4 text-sm text-(--color-muted) leading-relaxed">
+              Infusiones artesanales y blends funcionales pensados para acompañar
+              rituales cotidianos con intención y simpleza.
             </p>
 
             {/* Contacto */}
-            <div className="mt-6 space-y-3 text-sm">
+            <div className="mt-5 space-y-3 text-sm">
               <a
-                href="mailto:tiendaecobio@gmail.com"
+                href="mailto:tiendanaturalecobio@gmail.com"
                 className="flex items-center gap-2 text-(--color-muted) hover:text-(--color-primary) transition"
               >
                 <svg
-                  width="18"
-                  height="18"
+                  width="16"
+                  height="16"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -49,8 +48,8 @@ export function Footer() {
                 className="flex items-center gap-2 text-(--color-muted) hover:text-(--color-primary) transition"
               >
                 <svg
-                  width="18"
-                  height="18"
+                  width="16"
+                  height="16"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -68,33 +67,58 @@ export function Footer() {
           </div>
 
           {/* Navegación */}
-          <div className="grid gap-10 sm:grid-cols-2 text-sm">
+          <div className="grid gap-8 sm:grid-cols-2 text-sm">
+
             <div>
-              <p className="text-xs uppercase tracking-widest text-neutral-500 mb-4">
+              <p className="text-xs uppercase tracking-widest text-neutral-500 mb-3">
                 Secciones
               </p>
-              <ul className="space-y-3 text-(--color-muted)">
-                <li><Link href="/#productos" className="hover:text-(--color-primary)">Productos</Link></li>
-                <li><Link href="/#como-usar" className="hover:text-(--color-primary)">Usos</Link></li>
-                <li><Link href="/#locales" className="hover:text-(--color-primary)">Para locales</Link></li>
+              <ul className="space-y-2 text-(--color-muted)">
+                <li>
+                  <Link href="/#productos" className="hover:text-(--color-primary)">
+                    Productos
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#como-usar" className="hover:text-(--color-primary)">
+                    Usos
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#locales" className="hover:text-(--color-primary)">
+                    Para locales
+                  </Link>
+                </li>
               </ul>
             </div>
 
             <div>
-              <p className="text-xs uppercase tracking-widest text-neutral-500 mb-4">
+              <p className="text-xs uppercase tracking-widest text-neutral-500 mb-3">
                 Catálogo
               </p>
-              <ul className="space-y-3 text-(--color-muted)">
-                <li><Link href="/toppings-mate" className="hover:text-(--color-primary)">Toppings</Link></li>
-                <li><Link href="/blends-te" className="hover:text-(--color-primary)">Blends</Link></li>
-                <li><Link href="/fitoterapia" className="hover:text-(--color-primary)">Fitoterapia</Link></li>
+              <ul className="space-y-2 text-(--color-muted)">
+                <li>
+                  <Link href="/toppings-mate" className="hover:text-(--color-primary)">
+                    Toppings
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blends-te" className="hover:text-(--color-primary)">
+                    Blends
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/fitoterapia" className="hover:text-(--color-primary)">
+                    Fitoterapia
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
         </div>
 
         {/* Legal */}
-        <div className="mt-20 border-t border-neutral-200 pt-6 text-center text-xs text-(--color-muted)">
+        <div className="mt-12 md:mt-20 border-t border-neutral-200 pt-5 text-center text-xs text-(--color-muted)">
           © {new Date().getFullYear()} Ecobio · Infusiones con propósito
         </div>
       </div>
