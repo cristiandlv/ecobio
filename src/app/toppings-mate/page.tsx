@@ -16,7 +16,7 @@ const toppings: Topping[] = [
     descripcion: "Intenso y especiado",
     ingredientes: ["Coco", "Cascarilla de Cacao", "Canela"],
     beneficios: "Relajante, antiinflamatoria",
-    usos: "Energezinate ideal para inicio del día",
+    usos: "Energezinate, digestivo. Quita la acidez estomacal",
     image: "/sienna.jpeg",
   },
   {
@@ -28,7 +28,7 @@ const toppings: Topping[] = [
       "Canela",
     ],
     beneficios: "Antiinflamatoria, calmante y relajante",
-    usos: "Insomnio, descanso mental y físico",
+    usos: "Descanso mental y físico. Antiinflamatoria miorelajante",
     image: "/cira.jpeg",
   },
   {
@@ -36,7 +36,7 @@ const toppings: Topping[] = [
     descripcion: "Cálido y floral",
     ingredientes: ["Cedrón", "Manzanilla", "Pétalos de rosa"],
     beneficios: "Calmante, digestiva",
-    usos: "Ritual nocturno",
+    usos: "Relajante, antiinflamatoria y digestiva.",
     image: "/luma.jpeg",
   },
   {
@@ -51,7 +51,7 @@ const toppings: Topping[] = [
       "Caléndula",
     ],
     beneficios: "Digestiva, analgésica y antiespasmódica",
-    usos: "Cambio de clima, molestias digestivas leves y tensión corporal",
+    usos: "Refrescante, espasmódica y digestiva. Quita la acidez estomacal",
     image: "/ayra.jpeg",
   },
   {
@@ -65,15 +65,15 @@ const toppings: Topping[] = [
       "Diente de león",
     ],
     beneficios: "Diuretica, antiinflamatoria y antiséptica",
-    usos: "Depurativa, retención de líquidos y digestión pesada",
+    usos: "Depurativa, retención de líquidos y digestivo. Quita la acidez estomacal",
     image: "/ruma.jpeg",
   },
   {
     name: "Zenda",
     descripcion: "Intenso, aromático y envolvente",
-    ingredientes: ["Menta", "Jengibre", "Lemon Grass", "limón"],
+    ingredientes: ["Menta", "Jengibre", "Limón"],
     beneficios: "Digestiva, espectorante y analgésica",
-    usos: "Procesos depurativos y rutinas conscientes",
+    usos: "Expetorante, analgésica y digestiva. Quita la acidez estomacal",
     image: "/zenda.jpeg",
   },
 ];

@@ -68,7 +68,7 @@ const recetas = [
     ],
     beneficios:
       "Reduce el nerviosismo, relaja el cuerpo y acompaña el equilibrio emocional.",
-    image: "/pauza.webp",
+    image: "/mock-pauza.jpeg",
   },
   {
     name: "CÉFIRO · Digestivo",
@@ -208,8 +208,10 @@ export default function FitoterapiaPage() {
       {/* ================= CTA ================= */}
       <div className="mt-16 text-center">
         <p className="max-w-2xl mx-auto text-(--color-muted)">
-          Cada receta puede adaptarse de forma personalizada según tus
-          necesidades específicas y tu momento vital.
+          Si estas infusiones no son las 
+          que buscas, podemos armarte la 
+          que mejor vaya con vos, según 
+          tus necesidades y preferencias.
         </p>
 
         <a

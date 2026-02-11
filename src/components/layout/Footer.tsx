@@ -104,7 +104,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link href="/blends-te" className="hover:text-(--color-primary)">
-                    Blends
+                    Blends de té
                   </Link>
                 </li>
                 <li>

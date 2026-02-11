@@ -122,12 +122,16 @@ export function FilosofiaEcobio() {
             <div>
               <p className="text-sm text-neutral-700 leading-relaxed">
                 <strong className="font-medium text-neutral-900">
-                  Hola, soy Micaela
+                  Hola, soy Mica
                 </strong>
-                , la creadora detrás de Ecobio. Amo las plantas y crear blends
-                que ayuden a las personas a reconectar con pequeños rituales
-                cotidianos me hace profundamente feliz.
+                , la creadora detrás de Ecobio.
+                
+                
               </p>
+              <p className="text-sm text-neutral-700 leading-relaxed">
+            Mi amor por las plantas me ha llevado a estudiar, experimentar y crear infusiones que acompañan los rituales de cada día.
+              </p>
+            
 
               <p className="mt-2 text-xs text-(--color-muted)">
                 Fundadora · Blend maker · Fitoterapia consciente

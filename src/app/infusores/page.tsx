@@ -10,14 +10,14 @@ interface articulo {
 
 const infusores: articulo[] = [
   {
-    name: "Infusor reutilizable",
-    descripcion: "Infusor de tela reutilizable, ecológico y práctico para tus infusiones.",
+    name: "Infusor para taza",
+    descripcion: "Infusor de lienzo reutilizable para taza. Ecológico y práctico para tus infusiones.",
     
     image: "/infusorchico.jpeg",
   },
   {
-    name: "Infusor embudo reutilizable",
-    descripcion: "Infusor de tela tipo embudo, reutilizable y ecológico.",
+    name: "Infusor para tisanas",
+    descripcion: "Infusor de lienzo tipo embudo, reutilizable y ecológico.",
     
     image: "/infusorgrande.jpeg",
   },

@@ -19,7 +19,7 @@ const blendsTeina = [
       "<strong>Té rojo</strong>",
     ],
     ideal: "Diurético, antiinflamatorio y digestivo",
-    image: "/cumbre.jpeg",
+    image: "/cumbre1.jpeg",
   },
   {
     name: "Masala Chai",
@@ -35,7 +35,7 @@ const blendsTeina = [
       "<strong>Té negro</strong>",
     ],
     ideal: "Depurativo, digestivo y revitalizante",
-    image: "/chai.jpeg",
+    image: "/chai2.jpeg",
   },
   {
     name: "Nativo",
@@ -43,12 +43,12 @@ const blendsTeina = [
     gustos: "Notas frutales y dulces",
     ingredientes: ["Mandarina", "Hibiscus", "Rooibos"],
     ideal: "Sin cafeína, relajante y digestivo",
-    image: "/nativo.jpeg",
+    image: "/nativo1.jpeg",
   },
   {
     name: "Prado",
     perfil: "Herbal y fresco",
-    gustos: "Notas verdes y florales",
+    gustos: "Notas florales",
     ingredientes: [
       "Cedrón",
       "Pimienta rosa",
@@ -57,7 +57,21 @@ const blendsTeina = [
       "<strong>Té verde</strong>",
     ],
     ideal: "Antioxidante y relajante",
-    image: "/prado.jpeg",
+    image: "/prado1.jpeg",
+  },
+  {
+    name: "Alba",
+    perfil: "Herbal y dulce",
+    gustos: "Notas cítricas y herbales",
+    ingredientes: [
+      "Hierbabuena",
+      "Rosa mosqueta",
+      "Capullo de Jazmín",
+      "Naranja",
+      "<strong>Té verde</strong>",
+    ],
+    ideal: "Antioxidante y digestivo",
+    image: "/alba2.jpeg",
   },
 ];
 
