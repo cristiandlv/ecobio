@@ -29,7 +29,7 @@ export function FilosofiaEcobio() {
 
           <div className="rounded-2xl overflow-hidden shadow-lg group">
             <Image
-              src="/mock-ingredientes.webp"
+              src="/tacita2.jpeg"
               alt="Ingredientes naturales Ecobio"
               width={400}
               height={300}
@@ -39,7 +39,7 @@ export function FilosofiaEcobio() {
 
           <div className="rounded-2xl overflow-hidden shadow-lg group">
             <Image
-              src="/mock-ritual.webp"
+              src="/mortero.jpeg"
               alt="Momento de bienestar"
               width={400}
               height={300}

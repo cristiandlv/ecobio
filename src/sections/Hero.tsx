@@ -37,7 +37,7 @@ export function Hero() {
           <div className="relative rounded-[32px] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.18)] hero-grain">
             <div className="hero-zoom">
               <Image
-                src="/hero-infusion.webp"
+                src="/cuchara2.jpeg"
                 alt="Blends artesanales Ecobio"
                 width={720}
                 height={520}
@@ -113,7 +113,7 @@ export function Hero() {
             </a>
 
             <a
-              href="https://forms.gle/sjHF8aTrCYVuTZiJ8"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf2WKWfqIfy-F0tNyD8aTXzzFWZqiIvHWY8V-7AMmBQgdRniA/viewform?usp=sf_link"
               target="_blank"
               rel="noopener noreferrer"
               className="

@@ -13,14 +13,14 @@ const products = [
     title: "Blends de té",
     description:
       "Blends de té en hebras y hierbas seleccionadas, pensados para distintos momentos del día.",
-    image: "/mock-te.webp",
+    image: "/infusion5.webp",
     href: "/blends-te",
   },
   {
-    title: "Fitoterapia personalizada",
+    title: "Fitoterapia",
     description:
       "Recetas y blends funcionales creados según tus necesidades de bienestar.",
-    image: "/infusion5.webp",
+    image: "/mock-ingredientes.webp",
     href: "/fitoterapia",
   },
   {
