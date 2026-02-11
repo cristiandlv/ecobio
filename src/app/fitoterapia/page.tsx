@@ -8,7 +8,7 @@ const recetas = [
     ingredientes: ["Hierbabuena", "Melisa", "Canela"],
     beneficios:
       "Alivia dolores menstruales, espasmos uterinos y malestar digestivo asociado al ciclo.",
-    image: "/nerina1.jpg",
+    image: "/nerina1.jpeg",
   },
   {
     name: "NUBIA · Insomnio",
