@@ -78,7 +78,7 @@ const toppings: Topping[] = [
   },
 ];
 
-const whatsappBase = "https://wa.me/5491123456789?text=";
+const whatsappBase = "https://wa.me/5492246460002?text=";
 const getWspLink = (item: Topping) =>
   whatsappBase +
   encodeURIComponent(`Hola! Quiero comprar el topping: ${item.name}`);

@@ -24,7 +24,7 @@ const infusores: articulo[] = [
  
 ];
 
-const whatsappBase = "https://wa.me/5491123456789?text=";
+const whatsappBase = "https://wa.me/5492246460002?text=";
 const getWspLink = (item: articulo) =>
   whatsappBase +
   encodeURIComponent(`Hola! Quiero comprar el infusor: ${item.name}`);

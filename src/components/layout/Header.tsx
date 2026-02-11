@@ -23,7 +23,7 @@ export function Header() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.png" alt="Ecobio" width={44} height={44} priority />
+            <Image src="/ecobiologo.png" alt="Ecobio" width={44} height={44} priority />
             <span className="font-semibold text-lg text-(--color-primary)">
               Ecobio
             </span>

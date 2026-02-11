@@ -69,29 +69,19 @@ export function Hero() {
             con intención, equilibrio y simpleza.
           </p>
 
-          {/* línea editorial */}
-          <div className="mt-7 w-20 h-[2px] bg-(--color-primary) animate-fade-in" />
+          <div className="mt-8 flex items-center gap-4 text-sm text-(--color-muted) animate-fade-in-up">
+  {["Artesanal", "Natural", "Funcional"].map(
+    (tag, index) => (
+      <span key={tag} className="flex items-center gap-4">
+        {index !== 0 && (
+          <span className="w-1 h-1 rounded-full bg-(--color-primary)/60" />
+        )}
+        {tag}
+      </span>
+    )
+  )}
+</div>
 
-          {/* valores */}
-          <div className="mt-8 flex flex-wrap gap-3 animate-fade-in-up">
-            {["Artesanal", "Natural", "Funcional", "Con intención"].map((tag) => (
-              <span
-                key={tag}
-                className="
-                  text-xs
-                  px-4
-                  py-2
-                  rounded-full
-                  bg-white
-                  text-(--color-primary)
-                  border border-neutral-100
-                  shadow-sm
-                "
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
 
           {/* CTAs */}
           <div className="mt-10 flex flex-wrap gap-4 animate-fade-in-up">

@@ -27,7 +27,7 @@ export function Contact() {
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
 
           <a
-            href="https://wa.me/5491123456789"
+            href="https://wa.me/542246460002"
             target="_blank"
             rel="noopener noreferrer"
             className="

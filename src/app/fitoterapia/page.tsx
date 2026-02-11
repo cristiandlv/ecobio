@@ -117,7 +117,7 @@ interface receta {
 }
 
 
-const whatsappBase = "https://wa.me/5491123456789?text=";
+const whatsappBase = "https://wa.me/5492246460002?text=";
 const getWspLink = (item: receta) =>
   whatsappBase +
   encodeURIComponent(`Hola! Quiero comprar esta receta: ${item.name}`);
