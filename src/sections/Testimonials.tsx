@@ -18,30 +18,31 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="relative px-6 py-24 md:py-28 bg-(--color-primary-soft)">
+    <section className="relative px-6 py-16 md:py-20 bg-(--color-primary-soft)">
       <div className="max-w-6xl mx-auto">
+        
         {/* Header */}
-        <header className="text-center max-w-2xl mx-auto mb-14 animate-fade-in-up">
-          <span className="block text-xs uppercase tracking-widest text-(--color-primary) font-medium">
+        <header className="text-center max-w-2xl mx-auto mb-10">
+          <span className="block text-[11px] uppercase tracking-widest text-(--color-primary) font-medium">
             Testimonios
           </span>
 
-          <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-(--color-primary)">
+          <h2 className="mt-2 text-2xl md:text-3xl font-semibold text-(--color-primary)">
             Experiencias reales con Ecobio
           </h2>
         </header>
-
-        {/* SLIDER */}
+      
+        {/* Slider */}
         <div
           className="
             -mx-6 px-6
-            flex gap-6
+            flex gap-5
             overflow-x-auto
             snap-x snap-mandatory
             no-scrollbar
             md:mx-0 md:px-0
             md:grid md:grid-cols-3
-            md:gap-8
+            md:gap-6
             md:overflow-visible
           "
         >
@@ -57,25 +58,19 @@ export function Testimonials() {
             >
               <blockquote
                 className="
-                  relative
                   bg-white
-                  rounded-3xl
-                  p-8
+                  rounded-2xl
+                  p-6
                   border border-neutral-100
-                  shadow-[0_10px_30px_rgba(0,0,0,0.06)]
+                  shadow-[0_8px_25px_rgba(0,0,0,0.05)]
                   h-full
                 "
               >
-                {/* comilla */}
-                <span className="absolute top-6 right-6 text-5xl text-(--color-primary-soft)">
-                  “
-                </span>
-
-                <p className="text-sm text-neutral-700 leading-relaxed">
+                <p className="text-[15px] text-neutral-700 leading-relaxed">
                   {t.text}
                 </p>
 
-                <footer className="mt-6">
+                <footer className="mt-4">
                   <p className="text-sm font-medium text-neutral-800">
                     {t.author}
                   </p>
@@ -88,10 +83,51 @@ export function Testimonials() {
           ))}
         </div>
 
-        {/* hint */}
-        <p className="mt-8 text-xs text-center text-(--color-muted) md:hidden">
+        <p className="mt-6 text-[12px] text-center text-(--color-muted) md:hidden">
           Deslizá para leer más →
         </p>
+
+        {/* CTA refinado */}
+        <div className="mt-12 text-center">
+          
+          <p className="text-xs uppercase tracking-widest text-(--color-primary) font-medium">
+            Valoramos tu opinión
+          </p>
+
+          <p className="mt-3 text-base md:text-lg text-neutral-700 leading-relaxed">
+            Si Ecobio forma parte de tus momentos cotidianos,
+            nos ayuda mucho que compartas tu experiencia.
+          </p>
+
+          <a
+            href="https://g.page/r/CdAc5fJRMk3uEBM/review"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              inline-flex
+              items-center
+              gap-2
+              mt-6
+              bg-white
+              text-(--color-primary)
+              border border-(--color-primary)
+              px-7
+              py-3
+              rounded-full
+              text-sm
+              font-medium
+              shadow-[0_6px_18px_rgba(0,0,0,0.06)]
+              hover:bg-(--color-primary)
+              hover:text-white
+              hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)]
+              transition
+            "
+          >
+            <span className="text-base">★</span>
+            Dejar una reseña en Google
+          </a>
+        </div>
+
       </div>
     </section>
   );
