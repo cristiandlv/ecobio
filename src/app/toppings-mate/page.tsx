@@ -8,6 +8,7 @@ interface Topping {
   beneficios: string;
   usos: string;
   image: string;
+  empretienda?: string;
 }
 
 const toppings: Topping[] = [
@@ -18,6 +19,7 @@ const toppings: Topping[] = [
     beneficios: "Relajante, antiinflamatoria",
     usos: "Energezinate, digestivo. Quita la acidez estomacal",
     image: "/sienna.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/toppings-de-mate/sienna",
   },
   {
     name: "Cira",
@@ -30,6 +32,7 @@ const toppings: Topping[] = [
     beneficios: "Antiinflamatoria, calmante y relajante",
     usos: "Descanso mental y físico. Antiinflamatoria miorelajante",
     image: "/cira.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/toppings-de-mate/cira",
   },
   {
     name: "Luma",
@@ -38,6 +41,7 @@ const toppings: Topping[] = [
     beneficios: "Calmante, digestiva",
     usos: "Relajante, antiinflamatoria y digestiva.",
     image: "/luma.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/toppings-de-mate/luma",
   },
   {
     name: "Ayra",
@@ -53,6 +57,7 @@ const toppings: Topping[] = [
     beneficios: "Digestiva, analgésica y antiespasmódica",
     usos: "Refrescante, espasmódica y digestiva. Quita la acidez estomacal",
     image: "/ayra.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/toppings-de-mate/ayra",
   },
   {
     name: "Ruma",
@@ -67,6 +72,7 @@ const toppings: Topping[] = [
     beneficios: "Diuretica, antiinflamatoria y antiséptica",
     usos: "Depurativa, retención de líquidos y digestivo. Quita la acidez estomacal",
     image: "/ruma.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/toppings-de-mate/ruma",
   },
   {
     name: "Zenda",
@@ -75,13 +81,11 @@ const toppings: Topping[] = [
     beneficios: "Digestiva, espectorante y analgésica",
     usos: "Expetorante, analgésica y digestiva. Quita la acidez estomacal",
     image: "/zenda.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/toppings-de-mate/zenda",
   },
 ];
 
-const whatsappBase = "https://wa.me/5492246460002?text=";
-const getWspLink = (item: Topping) =>
-  whatsappBase +
-  encodeURIComponent(`Hola! Quiero comprar el topping: ${item.name}`);
+// ...existing code...
 
 export default function ToppingsMatePage() {
   return (
@@ -133,11 +137,11 @@ export default function ToppingsMatePage() {
             className="p-5"
             action={
               <a
-                href={getWspLink(t)}
+                href={t.empretienda}
                 target="_blank"
-                className="mt-3 inline-block bg-(--color-primary) text-white text-sm px-4 py-2 rounded-full"
+                className="mt-3 inline-block bg-(--color-primary) text-white text-sm px-4 py-2 rounded-full shadow hover:opacity-90 transition"
               >
-                Comprar
+                Comprar en la tienda
               </a>
             }
           >

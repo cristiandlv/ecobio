@@ -24,10 +24,7 @@ const infusores: articulo[] = [
  
 ];
 
-const whatsappBase = "https://wa.me/5492246460002?text=";
-const getWspLink = (item: articulo) =>
-  whatsappBase +
-  encodeURIComponent(`Hola! Quiero comprar el infusor: ${item.name}`);
+const whatsappBase = "https://wa.me/5492246460002?text=Hola! Quiero comprar un infusor Ecobio";
 
 export default function InfusoresPage() {
   return (
@@ -79,11 +76,11 @@ export default function InfusoresPage() {
             className="p-5"
             action={
               <a
-                href={getWspLink(t)}
+                href={whatsappBase}
                 target="_blank"
-                className="mt-1 inline-block bg-(--color-primary) text-white text-sm px-4 py-2 rounded-full"
+                className="mt-1 inline-block bg-(--color-primary) text-white text-sm px-4 py-2 rounded-full shadow hover:opacity-90 transition"
               >
-                Comprar
+                Consultar por WhatsApp
               </a>
             }
           >

@@ -6,6 +6,8 @@ import ProductCard from "@/components/ProductCard";
 ====================== */
 
 const blendsTeina = [
+  // Agregar campo 'empretienda' a cada producto
+  // Ejemplo: empretienda: "https://www.empretienda.com.ar/producto/cumbre"
   {
     name: "Cumbre",
     perfil: "Aromático, frutal, digestivo",
@@ -20,6 +22,7 @@ const blendsTeina = [
     ],
     ideal: "Diurético, antiinflamatorio y digestivo",
     image: "/cumbre1.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/te-en-hebras/cumbre",
   },
   {
     name: "Masala Chai",
@@ -36,6 +39,7 @@ const blendsTeina = [
     ],
     ideal: "Depurativo, digestivo y revitalizante",
     image: "/chai2.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/te-en-hebras/masala-chai",
   },
   {
     name: "Nativo",
@@ -44,6 +48,7 @@ const blendsTeina = [
     ingredientes: ["Mandarina", "Hibiscus", "Rooibos"],
     ideal: "Sin cafeína, relajante y digestivo",
     image: "/nativo1.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/te-en-hebras/nativo",
   },
   {
     name: "Prado",
@@ -58,6 +63,7 @@ const blendsTeina = [
     ],
     ideal: "Antioxidante y relajante",
     image: "/prado1.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/te-en-hebras/prado",
   },
   {
     name: "Alba",
@@ -72,10 +78,12 @@ const blendsTeina = [
     ],
     ideal: "Antioxidante y digestivo",
     image: "/alba2.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/te-en-hebras/alba",
   },
 ];
 
 const blendsSinTeina = [
+  // Agregar campo 'empretienda' a cada producto
   {
     name: "Sienna",
     perfil: "Intenso y especiado",
@@ -83,6 +91,7 @@ const blendsSinTeina = [
     ingredientes: ["Coco", "Cascarilla de cacao", "Canela"],
     usos: "Energizante suave para comenzar el día",
     image: "/sienna.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/sin-teina/sienna",
   },
   {
     name: "Cira",
@@ -91,6 +100,7 @@ const blendsSinTeina = [
     ingredientes: ["Manzanilla", "Pasionaria", "Canela"],
     usos: "Descanso mental y físico",
     image: "/cira.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/sin-teina/cira",
   },
   {
     name: "Luma",
@@ -99,6 +109,7 @@ const blendsSinTeina = [
     ingredientes: ["Cedrón", "Manzanilla", "Pétalos de rosa"],
     usos: "Ritual nocturno",
     image: "/luma.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/sin-teina/luma",
   },
   {
     name: "Ayra",
@@ -114,6 +125,7 @@ const blendsSinTeina = [
     ],
     usos: "Molestias digestivas y tensión corporal",
     image: "/ayra.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/sin-teina/ayra",
   },
   {
     name: "Ruma",
@@ -128,6 +140,7 @@ const blendsSinTeina = [
     ],
     usos: "Depuración y digestión pesada",
     image: "/ruma.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/sin-teina/ruma",
   },
   {
     name: "Zenda",
@@ -136,6 +149,7 @@ const blendsSinTeina = [
     ingredientes: ["Menta", "Jengibre", "Lemon grass", "Limón"],
     usos: "Rutinas conscientes y procesos depurativos",
     image: "/zenda.jpeg",
+    empretienda: "https://ecobio.empretienda.com.ar/sin-teina/zenda",
   },
 ];
 
@@ -143,14 +157,7 @@ const blendsSinTeina = [
    HELPERS
 ====================== */
 
-const whatsappBase = "https://wa.me/5492246460002?text=";
-
-function getWspLink(item: { name: string }) {
-  return (
-    whatsappBase +
-    encodeURIComponent(`Hola! Quiero comprar el blend: ${item.name}`)
-  );
-}
+// ...existing code...
 
 /* ======================
    PAGE
@@ -216,11 +223,11 @@ export default function BlendsTePage() {
               className="p-5"
               action={
                 <a
-                  href={getWspLink(blend)}
+                  href={blend.empretienda}
                   target="_blank"
-                  className="mt-4 inline-block bg-(--color-primary) text-white text-sm px-5 py-2 rounded-full hover:opacity-90 transition"
+                  className="mt-4 inline-block bg-(--color-primary) text-white text-sm px-5 py-2 rounded-full hover:opacity-90 transition shadow"
                 >
-                  Comprar
+                  Comprar en la tienda
                 </a>
               }
             >
@@ -263,11 +270,11 @@ export default function BlendsTePage() {
               className="p-5"
               action={
                 <a
-                  href={getWspLink(blend)}
+                  href={blend.empretienda}
                   target="_blank"
-                  className="mt-4 inline-block bg-(--color-primary) text-white text-sm px-5 py-2 rounded-full hover:opacity-90 transition"
+                  className="mt-4 inline-block bg-(--color-primary) text-white text-sm px-5 py-2 rounded-full hover:opacity-90 transition shadow"
                 >
-                  Comprar
+                  Comprar en la tienda
                 </a>
               }
             >
